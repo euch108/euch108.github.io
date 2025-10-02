@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- alt + shift +f => 들여쓰기 정렬 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹프로그래밍</title> 
-    <!-- title => 웹주소의 이름 -->
+    <title>웹프로그래밍</title>
 </head>
+
 <body>
-    <!-- 맨 처음 시작 시 느낌표 치고 엔터치면 헤드와 바디가 형성됨 -->
-    <!-- ctrl+/ = 주석 -->
-    <h1>안녕하세요. 저는 김은채입니다</h1>
+    <header>
+        <p>
+        <h1>편지</h1>
+        미처 전하지 못한 진심을 남겨보세요.
+        <hr>
+        </p>
+    </header>
+    <section>
+        <form name="sform" action="https://search.naver.com/search.naver" method="get">
+            <label>단어 검색:&nbsp;
+                <input name="query" type="text">
+                <input type="submit" value="검색"> </label>
+        </form>
+        <form>
+            <p>
+                <b>글자 색상 선택 &nbsp;&nbsp;</b> <input type="color" value=""
+                    onchange="document.body.style.color=this.value">
+            </p>
+            <p>
+            <fieldset style="width: 110px; height: 82px;">
+                <pre><label><b>보내는 이: </b><input type="text"></label>         <label><b>받는 이: </b><input type="text"></label></pre>
+                <label>받는 이와의 관계: <input type="text" list="relationship"><br>
+                <datalist id="relationship">
+                    <option value="가족"></option>
+                    <option value="연인"></option>
+                    <option value="친구"></option>
+                    <option value="사제지간"></option>
+                    <option value="직장 동료 및 상사"></option>
+                    <option value="본인"></option>
+                    <option value="기타"></option>
+                </datalist></label>
+            </fieldset>
+            </p>
+            <b>전달하고자 하는 이유 &nbsp;</b>
+            <input type="checkbox" name="reason" value="1">고마움
+            <input type="checkbox" name="reason" value="2">미안함
+            <input type="checkbox" name="reason" value="3">속상함/화남
+            <input type="checkbox" name="reason" value="4">아쉬움/후회
+            <input type="checkbox" name="reason" value="5">안부 인사
+            <input type="checkbox" name="reason" value="6">기타
+            <br><br>
+            전달하고 싶은 일자: <input type="date"> &nbsp; 시간: <input type="time"><br><br>
+            <hr>
+            <p>
+            <h4>내용</h4>
+            <textarea placeholder="즐거운 추석 되시길 바랍니다."></textarea>
+            </p>
+        </form>
 
-    <!-- p = 단락 만들기(앞뒤로 한 줄씩 띄우기) -->
-    <p>저는 충남대학교에 재학 중이며, 경제학을 전공하고 있습니다.</p>
-    <p>저희 과를 더 알고 싶다면 <a href="https://www.cnu.ac.kr"target="_blank">학교 홈페이지</a>를 확인해주세요. <br>
-
-    <!-- target="_blank" => 새로운 창을 띄워 링크 연결" -->
-  
-    <!-- img => 이미지 삽입 -->
-    <!-- scr = 파일 위치, width = 크기(픽셀단위), alt = 사진이 안 뜰 경우 나타날 사진 설명 --> 
- 
-    <img src="image/무민 이미지.png" width="400" height="300" alt="무민 사진">
-
-    <!-- ul => 순서가 없는 리스트, ol=> 순서있는 리스트 -->
-    <div style="background-color: beige; padding: 20px;">
-         <h2>관심 분야</h2>
-    <ul>
-        <li>요리</li>
-        <li>퍼즐 맞추기</li>
-    </ul>
-    </div>
-
-    <div style="background-color: rgb(196, 221, 243); width: 250px; height: 130px; padding: 10px;">
-        <h2>수강 과목</h2>
-    <ol>
-        <li>거시경제학원론</li>
-        <li>경제통계학</li>
-    </ol>
-    </div>
-
+    </section>
 </body>
+
 </html>
